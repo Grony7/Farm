@@ -30,13 +30,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3.5.1
-      - run: npm ci
+        uses: actions/setup-node@v7.0.0
+      - run: npm i
       - run: npm run start
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./public
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
